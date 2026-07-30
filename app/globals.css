@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -840,10 +839,16 @@ svg { stroke-width: 1.6; }
 .skill-orb:hover, .skill-orb:focus-visible { z-index: 5; border-color: rgb(224 110 58 / 60%); transform: scale(1.2); }
 .skill-orb > span { color: var(--orange); }
 .skill-orb h3 { margin: 0.5rem 0 0; font-size: 1.55rem; font-weight: 450; }
-.skill-orb ul { position: absolute; top: 76%; left: 50%; width: 11rem; margin: 0; padding: 0.75rem; transform: translate(-50%, -10%); border: 1px solid var(--line); background: rgb(8 8 8 / 92%); color: #aaa69f; text-align: center; list-style: none; opacity: 0; transition: opacity 0.35s, transform 0.35s; pointer-events: none; }
+.skill-orb ul { position: absolute; top: 76%; left: 50%; display: flex; width: min(19rem, calc(100vw - 2rem)); box-sizing: border-box; flex-wrap: wrap; justify-content: center; gap: 0.4rem 0.65rem; margin: 0; padding: 0.85rem 1rem; transform: translate(-50%, -10%); border: 1px solid var(--line); background: rgb(8 8 8 / 94%); color: #aaa69f; text-align: center; list-style: none; opacity: 0; backdrop-filter: blur(12px); transition: opacity 0.35s, transform 0.35s; pointer-events: none; }
 .skill-orb:hover ul, .skill-orb:focus-visible ul { transform: translate(-50%, 0); opacity: 1; }
-.skill-orb li { display: inline; font-size: 0.65rem; }
-.skill-orb li:not(:last-child)::after { margin-inline: 0.35rem; color: var(--orange); content: "·"; }
+.skill-orb li { display: inline-flex; align-items: center; font-size: 0.65rem; white-space: nowrap; }
+.skill-orb li:not(:last-child)::after { margin-left: 0.65rem; color: var(--orange); content: "·"; }
+.skill-orb--1 ul, .skill-orb--4 ul { left: 0; transform: translateY(-10%); }
+.skill-orb--2 ul, .skill-orb--5 ul { right: 0; left: auto; transform: translateY(-10%); }
+.skill-orb--1:hover ul, .skill-orb--1:focus-visible ul,
+.skill-orb--2:hover ul, .skill-orb--2:focus-visible ul,
+.skill-orb--4:hover ul, .skill-orb--4:focus-visible ul,
+.skill-orb--5:hover ul, .skill-orb--5:focus-visible ul { transform: translateY(0); }
 .skill-orb--1 { top: 2%; left: 3%; }
 .skill-orb--2 { top: 9%; right: 9%; width: 16rem; animation-delay: -1.5s; }
 .skill-orb--3 { top: 36%; left: 30%; width: 17rem; animation-delay: -3s; }
@@ -1150,6 +1155,8 @@ svg { stroke-width: 1.6; }
   .ai-lab__cards article { padding: 0.7rem; }
   .skill-cloud { min-height: 39rem; }
   .skill-orb { width: 10rem; }
+  .skill-orb:hover, .skill-orb:focus-visible { transform: scale(1.08); }
+  .skill-orb ul { width: min(17rem, calc(100vw - 3rem)); }
   .skill-orb--2 { width: 12rem; }
   .skill-orb--3 { top: 34%; left: 25%; width: 13rem; }
   .skill-orb--4 { width: 11rem; }

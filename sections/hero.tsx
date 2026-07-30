@@ -8,7 +8,7 @@ import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { portfolio } from "@/lib/portfolio-data";
 import { usePortfolioStore } from "@/store/use-portfolio-store";
 
-const roles = ["GENERATIVE AI", "JAVA BACKEND SYSTEMS", "FULL-STACK PRODUCTS", "GIS INTELLIGENCE"];
+const roles = ["GEN AI DEVELOPER", "JAVA BACKEND DEVELOPER", "FULL-STACK DEVELOPER","MACHINE LEARNING ENTHUSIAST", "OPEN SOURCE CONTRIBUTOR", "GIS DEVELOPER"];
 
 function TypingRole() {
   const [roleIndex, setRoleIndex] = useState(0);

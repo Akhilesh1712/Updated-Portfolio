@@ -46,10 +46,10 @@ export function Navigation() {
 
         <a
           className="site-nav__resume"
-          href={portfolio.links.resume || "#contact"}
-          title={portfolio.links.resume ? "Open résumé" : "Résumé link will be added soon"}
-          target={portfolio.links.resume ? "_blank" : undefined}
-          rel={portfolio.links.resume ? "noreferrer" : undefined}
+          href={portfolio.links.resume}
+          title="Open résumé"
+          target="_blank"
+          rel="noreferrer"
           data-magnetic
           data-cursor="link"
         >
